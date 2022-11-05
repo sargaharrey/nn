@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./node_modules/axios/index.js"></script>
+    <script>
+        
+            const options = {
+                method: 'GET',
+                url: 'https://joj-image-search.p.rapidapi.com/v2/',
+                params: { q: 'logos', hl: 'en', filter: 'games' },
+                headers: {
+                    'X-RapidAPI-Key': '55ed55a246msh2c72c04abcf46f5p1078a4jsnfe9822a46d23',
+                    'X-RapidAPI-Host': 'joj-image-search.p.rapidapi.com'
+                }
+            };
+
+            axios.request(options).then(function (response) {
+                console.log(response.data);
+            }).catch(function (error) {
+                console.error(error);
+            });
+
+    </script>
+</body>
+</html>

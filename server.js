@@ -58,7 +58,7 @@ app.get('/games',(req,res)=>{
 
 app.get('/',(req,res)=>{
 
-    res.send(scors)
+    res.send(games)
 })
 
 const imgsArr =[

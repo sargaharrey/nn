@@ -5,7 +5,7 @@ const helmet = require('helmet')
 const bodyParser = require('body-parser')
 
 const games = require('./test.json')
-const scorers = require('./matches.json')
+const scors = require('./matches.json')
 
 let  channels  = []
 let  channelsImgs  = []
@@ -56,9 +56,9 @@ app.get('/games',(req,res)=>{
     res.send(games)
 })
 
-app.get('/scores',(req,res)=>{
+app.get('/scors',(req,res)=>{
 
-    res.send(scorers)
+    res.send(scors)
 })
 
 const imgsArr =[

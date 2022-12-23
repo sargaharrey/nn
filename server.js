@@ -56,7 +56,7 @@ app.get('/games',(req,res)=>{
     res.send(games)
 })
 
-app.get('/scors',(req,res)=>{
+app.get('/',(req,res)=>{
 
     res.send(scors)
 })

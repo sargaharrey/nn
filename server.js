@@ -5,7 +5,7 @@ const helmet = require('helmet')
 const bodyParser = require('body-parser')
 
 const games = require('./test.json')
-
+const scorers = require('./matches.json')
 
 let  channels  = []
 let  channelsImgs  = []
@@ -51,9 +51,14 @@ app.use(cors())
 
 app.use(morgan('combined'));
 
-app.get('/',(req,res)=>{
+app.get('/games',(req,res)=>{
 
     res.send(games)
+})
+
+app.get('/scores',(req,res)=>{
+
+    res.send(scorers)
 })
 
 const imgsArr =[
